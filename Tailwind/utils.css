@@ -1,0 +1,45 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  .bg-red {
+    background-color: red;
+  }
+  .bg-yellow {
+    background-color: yellow;
+  }
+  .bg-blue {
+    background-color: blue;
+  }
+  .bg-green {
+    background-color: green;
+  }
+  .bg-black {
+    background-color: black;
+  }
+  .text-sm{
+    font-size: 10px;
+  }
+  .text-md{
+    font-size: 16px;
+  }
+  .text-lg{
+    font-size: 20px;
+  }
+  .text-xl{
+    font-size: 24px;
+  }
+  .text-2xl{
+    font-size: 32px;
+  }
+  .flex{
+    display: flex;
+  }
+  .flex-row{
+    flex-direction: row;
+  }
+  .flex-coloumn{
+    flex-direction: column;
+  }

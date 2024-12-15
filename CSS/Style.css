@@ -1,0 +1,14 @@
+body{
+  height: 100vh;
+}
+h1{
+  font-size: 50px;
+}
+@media (max-width: 768px) {
+  body{
+  background-color: aqua;
+  }
+h1{
+  font-size: 30px;
+}
+}

@@ -4,10 +4,12 @@ const fs = require("fs/promises");
 
 const addToDb = async (data, path) => {
     try {
+        // read file is used to read the data from the file 
         const dbData = await fs.readFile(path, "utf8");
         const parsedData = JSON.parse(dbData);
         parsedData.push(data);
-        await fs.writeFile(path, JSON.stringify(parsedData));
+        // write file is used to write data to the file 
+        await fs.writeFile(path, JSON.stringify(parsedData));// write data to the file
         return true;
     } catch (error) {
         console.log(error)

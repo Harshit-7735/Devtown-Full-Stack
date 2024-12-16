@@ -38,15 +38,18 @@ app.post('/api/auth/signup',async(req,res)=>{
       })
     }
     // write to the DB
+    // hash the password
     const salt = await bcrypt.genSalt(10);
     console.log(salt)
     const hashedPassword = await bcrypt.hash(password,salt);
+    // create a new user
     const newUser = {
       id:uuid.v4(),
       email,
       username,
       password:hashedPassword
     }
+    // add user to the db 
     await addToDb(newUser,'./db/users.json');
     return res.json({
       ...newUser

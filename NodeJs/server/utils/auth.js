@@ -4,7 +4,7 @@ const secret = "Top_secret@$#%^&&^Q#@@";
 module.exports.generateToken = (payload) => {
 // takes the payload and secret key and return the token
     return jwt.sign(payload,secret,{
-        expiresIn:"2000s"
+        expiresIn: '1h'
     })
 }
 

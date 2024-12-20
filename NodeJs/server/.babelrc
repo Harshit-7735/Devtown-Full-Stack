@@ -1,0 +1,15 @@
+// it is a configuration file for babel 
+// it is used to tell babel how to transpile the code 
+
+{
+    "presets":[
+        [
+            "@babel/preset-env", // it is a preset that tells babel to transpile the code to the latest version of javascript
+            {
+                "targets": {
+                    "esmodules": "true" // it tells babel to transpile the code to es6 modules
+                }
+            }
+        ]
+    ]
+}

@@ -84,23 +84,27 @@
       </div>
     </section>
     <script>
+      // check if user is already logged in
       const token = localStorage.getItem("token");
       if (token) {
         window.location.href = "/"
       }
-
+// handle form submission
       const form = document.querySelector("form");
       const handleSubmit = async (e) => {
         try {
           e.preventDefault();
           const formData = new FormData(form);
           const auth = Object.fromEntries(formData);
+          // send a POST request to the server to login
           const response = await axios.post("/api/auth/login", auth);
+          // check if the request was successful or not 
           const { success, data, message } = response.data;
           if (!success) {
             // incorrect password
             return window.alert(message);
           }
+          // save the token in the local storage and redirect the user to the home page
           const { token } = data;
           localStorage.setItem("token", token);
           window.location.href = "/";

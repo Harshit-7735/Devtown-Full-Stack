@@ -99,18 +99,21 @@
       </div>
     </section>
     <script>
+        // Check if the user is already logged in
       const token = localStorage.getItem("token");
       if (token) {
         window.location.href = "/";
       }
+      // Handle form submission
       const form = document.querySelector("form");
       const handleSubmit = async (e) => {
         try {
-          e.preventDefault();
-          const formData = new FormData(form);
-          const data = Object.fromEntries(formData);
+          e.preventDefault(); // prevent the default form submission
+          const formData = new FormData(form); // create a new FormData object
+          const data = Object.fromEntries(formData); // convert formData to an object
+          // send a POST request to the server
           const response = await axios.post("/api/auth/signup", data);
-          window.location.href = "/login";
+          window.location.href = "/login"; // redirect to the login page
         } catch (error) {
           console.log(error);
           window.alert(error.response.data.message);

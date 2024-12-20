@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node Index.js",
     "something": "echo 'Hello World",
-    "dev": "nodemon Index.js"
+    "build": "npx babel src --out-dir dist",
+    "dev": "nodemon --exec babel-node src/index.js"
   },
   "keywords": [],
   "author": "Harshit",
@@ -19,6 +20,17 @@
     "uuid": "^10.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.4"
+    "nodemon": "^3.1.4",
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.22.6",
+    "@babel/preset-env": "7.16.4",
+    "babel-loader": "8.2.3",
+    "nodemon-webpack-plugin": "^4.8.1",
+    "webpack": "5.64.3",
+    "webpack-cli": "4.9.1",
+    "webpack-dev-server": "4.5.0"
   }
 }
+  
+

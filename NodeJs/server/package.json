@@ -6,8 +6,9 @@
   "scripts": {
     "start": "node Index.js",
     "something": "echo 'Hello World",
-    "build": "npx babel src --out-dir dist",
-    "dev": "nodemon --exec babel-node src/index.js"
+   "build":"webpack --config webpack.config.js --mode production",
+    "dev":"webpack --config webpack.config.js --mode development -w"
+
   },
   "keywords": [],
   "author": "Harshit",

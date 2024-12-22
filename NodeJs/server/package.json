@@ -6,9 +6,8 @@
   "scripts": {
     "start": "node Index.js",
     "something": "echo 'Hello World",
-   "build":"webpack --config webpack.config.js --mode production",
-    "dev":"webpack --config webpack.config.js --mode development -w"
-
+    "build": "webpack --config webpack.config.js --mode production",
+    "dev": "webpack  --config webpack.config.js --mode development -w"
   },
   "keywords": [],
   "author": "Harshit",
@@ -18,20 +17,19 @@
     "bcryptjs": "^2.4.3",
     "express": "^4.21.0",
     "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.2",
     "uuid": "^10.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.4",
     "@babel/cli": "^7.22.9",
     "@babel/core": "^7.16.0",
     "@babel/node": "^7.22.6",
     "@babel/preset-env": "7.16.4",
     "babel-loader": "8.2.3",
+    "nodemon": "^3.1.4",
     "nodemon-webpack-plugin": "^4.8.1",
     "webpack": "5.64.3",
     "webpack-cli": "4.9.1",
     "webpack-dev-server": "4.5.0"
   }
 }
-  
-

@@ -270,8 +270,11 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _random__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./random */ "./src/random.js");
+// import { connectDB } from "../utils/db";
 
 console.log((0,_random__WEBPACK_IMPORTED_MODULE_0__.random)());
+
+// connectDB();
 })();
 
 /******/ })()

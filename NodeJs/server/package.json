@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node Index.js",
     "something": "echo 'Hello World",
-    "build": "webpack --config webpack.config.js --mode production",
-    "dev": "webpack  --config webpack.config.js --mode development -w"
+    "dev" : "nodemon Index.js"
   },
   "keywords": [],
   "author": "Harshit",

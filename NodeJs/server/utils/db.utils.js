@@ -1,6 +1,7 @@
-import mongoose from 'mongoose';
+
+const mongoose = require('mongoose');
 const DB_URI = "mongodb+srv://harshit:poddar@mycluster.ag9s9.mongodb.net/";
-    export const connectDB = async () => {
+    const connectDB = async () => {
         try {
             await mongoose.connect(DB_URI,{})
             console.log('MongoDB connected ...');
@@ -8,4 +9,4 @@ const DB_URI = "mongodb+srv://harshit:poddar@mycluster.ag9s9.mongodb.net/";
             console.log(error);
         }
     }
-
+    module.exports = connectDB;

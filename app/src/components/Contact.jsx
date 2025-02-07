@@ -1,26 +1,11 @@
+import { Link } from "react-router-dom";
 const Contact = ({ setRoute }) => {
   return (
     <>
       <h1>Contact</h1>
-      <a
-        style={{
-          textDecoration: "underline"
-        }}
-        href="/"
-      >
-        Home
-      </a>
-
+      <Link to="/">Home</Link>
       <br />
-
-      <a
-        style={{
-          textDecoration: "underline"
-        }}
-        href="/about"
-      >
-        About
-      </a>
+      <Link to="/about">About</Link>
     </>
   );
 };

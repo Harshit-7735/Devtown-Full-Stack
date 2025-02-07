@@ -1,26 +1,12 @@
+import { Link } from "react-router";
+
 const Home = ({ setRoute }) => {
   return (
     <>
       <h1>Home</h1>
-      <a
-        style={{
-          textDecoration: "underline",
-        }}
-       href="/contact"
-      >
-        Contact
-      </a>
-
+      <Link to="/about">About</Link>
       <br />
-
-      <a
-        style={{
-          textDecoration: "underline",
-        }}
-        href="/about"
-      >
-        About
-      </a>
+      <Link to="/contact">Contact</Link>
     </>
   );
 };
